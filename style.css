@@ -78,4 +78,15 @@ svg{
   padding-right: 1rem;
   
 }
-  
+
+#dashboard > h2 {
+  display: inline; 
+}
+
+#dashboard > svg {
+    fill: white;
+  width: 2.5rem; 
+  height: 2.5rem; 
+  vertical-align: top;
+  padding-right: 1rem;
+}
