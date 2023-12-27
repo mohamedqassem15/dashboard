@@ -1,4 +1,4 @@
-body{
+body, html{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -7,19 +7,60 @@ body{
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 25vh 75vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
     gap: 0;
  
 }
 
 #header{
-    background-color: red;
-    display: grid;
     grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
     
 
+#intro-text{
+  margin-right: 45%;
+}
 
+
+input[type="search"] {
+  width: 60%;
+  margin-right: 10%;
+  background-color: #E8F1F8;
+  border: 1px solid #ccc; 
+  border-radius: 20px;
+  padding: 10px;
+  
+}
+button {
+    background-color: #0284c7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    width: min-content;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: deepskyblue;
+  }
+#header > div > svg{
+  fill: black;
 }
 
 #sidebar{
@@ -27,18 +68,13 @@ body{
     grid-area: 1 / 1 / 3/ 2;
     padding-left: 5%;
     padding-top: 5%;
-    
+ }
 
-
-    
-
+.profile-pic{
+  width: 50px;
+  height: 50px;
 }
 
-#content{
-    background-color: purple;
-    grid-area: 2 / 2 / 3 / 3;
-  
-}
 
 #sidebar > ul, h1 {
     list-style: none;
@@ -90,3 +126,40 @@ svg{
   vertical-align: top;
   padding-right: 1rem;
 }
+
+
+
+#content{
+    display: grid;
+    gap: 20px;
+    grid-template: 1fr 1fr 1fr / 3fr 3fr 2fr;
+    padding: 40px 30px 40px 30px;
+    background-color: #E8F1F8;
+    grid-area: 2 / 2 / 3 / 3;
+}
+.content-item{
+    background-color: white;
+    border-left: 8px solid orange; 
+    border-radius: 12px;
+    padding: 15px;
+    
+
+}
+
+#content svg{
+    fill: black;
+    text-align: right;
+    
+}
+
+.svg-container{
+    text-align: right;
+    margin-top: 15%;
+}
+:not(.content-item) p {
+    /* Reset or specify the styles for <p> elements outside of .content-item */
+    /* For example, you can set margin, padding, color, etc. to their default values */
+    margin: 0;
+    padding: 0;
+    color: inherit; /* inherit the color from the parent */
+  }
